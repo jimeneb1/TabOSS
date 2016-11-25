@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PartyActivity">
+
+    <TabHost
+        android:id="@+id/tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/party"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/enterName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/party"
+                        android:text="Enter Individual Party Member Names Below:"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/inName1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contextClickable="false"
+                        android:ems="10"
+                        android:enabled="true"
+                        android:hint="Name"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/inName2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contextClickable="false"
+                        android:ems="10"
+                        android:hint="Name"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/inName3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Name"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/inName4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Name"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/inName5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Name"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/inName6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Name"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/inName7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Name"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/inName8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Name"
+                        android:inputType="textPersonName" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/toItemsBtn"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="100dp"
+                            android:layout_marginLeft="200dp"
+                            android:text="Continue to Items" />
+
+                        <Button
+                            android:id="@+id/homeBtn"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Exit to Home" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/items"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/enterItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Enter the Purchased Items along with Prices"
+                        android:textSize="18sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/enterItem">
+
+                        <EditText
+                            android:id="@+id/inItem1"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="Item"
+                            android:inputType="textPersonName" />
+
+                        <EditText
+                            android:id="@+id/inPrice1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/inItem1"
+                            android:layout_toEndOf="@+id/inItem1"
+                            android:ems="10"
+                            android:hint="$0.00"
+                            android:inputType="numberDecimal"
+                            android:text="0.00" />
+
+                        <EditText
+                            android:id="@+id/inItem2"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/inItem1"
+                            android:ems="10"
+                            android:hint="Item"
+                            android:inputType="textPersonName" />
+
+                        <EditText
+                            android:id="@+id/inPrice2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/inItem2"
+                            android:layout_below="@id/inPrice1"
+                            android:layout_toEndOf="@+id/inItem2"
+                            android:ems="10"
+                            android:hint="$0.00"
+                            android:inputType="numberDecimal"
+                            android:text="0.00" />
+
+                        <EditText
+                            android:id="@+id/inItem3"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/inItem2"
+                            android:ems="10"
+                            android:hint="Item"
+                            android:inputType="textPersonName" />
+
+                        <EditText
+                            android:id="@+id/inPrice3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/inItem3"
+                            android:layout_below="@id/inPrice2"
+                            android:layout_toEndOf="@+id/inItem3"
+                            android:ems="10"
+                            android:hint="$0.00"
+                            android:inputType="numberDecimal"
+                            android:text="0.00" />
+
+                        <EditText
+                            android:id="@+id/inItem4"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/inItem3"
+                            android:ems="10"
+                            android:hint="Item"
+                            android:inputType="textPersonName" />
+
+                        <EditText
+                            android:id="@+id/inPrice4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/inPrice3"
+                            android:layout_alignBottom="@+id/inItem4"
+                            android:layout_toEndOf="@+id/inItem4"
+                            android:ems="10"
+                            android:hint="$0.00"
+                            android:inputType="numberDecimal"
+                            android:text="0.00" />
+
+                        <EditText
+                            android:id="@+id/inItem5"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/inItem4"
+                            android:ems="10"
+                            android:hint="Item"
+                            android:inputType="textPersonName" />
+
+                        <EditText
+                            android:id="@+id/inPrice5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/inPrice4"
+                            android:layout_alignBottom="@+id/inItem5"
+                            android:layout_toEndOf="@+id/inItem5"
+                            android:ems="10"
+                            android:hint="$0.00"
+                            android:inputType="numberDecimal"
+                            android:text="0.00" />
+
+                        <EditText
+                            android:id="@+id/inItem6"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/inItem5"
+                            android:ems="10"
+                            android:hint="Item"
+                            android:inputType="textPersonName" />
+
+                        <EditText
+                            android:id="@+id/inPrice6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/inPrice5"
+                            android:layout_alignBottom="@+id/inItem6"
+                            android:layout_toEndOf="@+id/inItem6"
+                            android:ems="10"
+                            android:hint="$0.00"
+                            android:inputType="numberDecimal"
+                            android:text="0.00" />
+
+                        <EditText
+                            android:id="@+id/inItem7"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/inItem6"
+                            android:ems="10"
+                            android:hint="Item"
+                            android:inputType="textPersonName" />
+
+                        <EditText
+                            android:id="@+id/inPrice7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/inPrice6"
+                            android:layout_alignBottom="@+id/inItem7"
+                            android:layout_toEndOf="@+id/inItem7"
+                            android:ems="10"
+                            android:hint="$0.00"
+                            android:inputType="numberDecimal"
+                            android:text="0.00" />
+
+                        <EditText
+                            android:id="@+id/inItem8"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/inItem7"
+                            android:ems="10"
+                            android:hint="Item"
+                            android:inputType="textPersonName" />
+
+                        <EditText
+                            android:id="@+id/inPrice8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/inPrice7"
+                            android:layout_alignBottom="@+id/inItem8"
+                            android:layout_toEndOf="@+id/inItem8"
+                            android:ems="10"
+                            android:hint="$0.00"
+                            android:inputType="numberDecimal"
+                            android:text="0.00" />
+
+                        <LinearLayout
+                            android:id="@+id/itemsBtns"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/inPrice8"
+                            android:orientation="vertical">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@id/enterItem">
+                                <Button
+                                    android:id="@+id/toSplitBtn"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="100dp"
+                                    android:layout_marginLeft="200dp"
+                                    android:text="Continue to Split" />
+
+                                <Button
+                                    android:id="@+id/homeBtn2"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Exit to Home" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/split"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/splitText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Associate each Item with a Person"
+                        android:textSize="18sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/splitText">
+
+                        <TextView
+                            android:id="@+id/splitItem1"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+
+                        <Spinner
+                            android:id="@+id/spinnerItem1"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/splitItem1"
+                            android:layout_toEndOf="@+id/splitItem1"/>
+
+                        <TextView
+                            android:id="@+id/splitItem2"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/splitItem1"
+                            android:textSize="16sp" />
+
+                        <Spinner
+                            android:id="@+id/spinnerItem2"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/splitItem1"
+                            android:layout_alignBottom="@+id/splitItem2"
+                            android:layout_toEndOf="@+id/splitItem2"/>
+
+                        <TextView
+                            android:id="@+id/splitItem3"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/splitItem2"
+                            android:textSize="16sp" />
+
+                        <Spinner
+                            android:id="@+id/spinnerItem3"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/splitItem2"
+                            android:layout_alignBottom="@+id/splitItem3"
+                            android:layout_toEndOf="@+id/splitItem3"/>
+
+                        <TextView
+                            android:id="@+id/splitItem4"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/splitItem3"
+                            android:textSize="16sp" />
+
+                        <Spinner
+                            android:id="@+id/spinnerItem4"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/splitItem3"
+                            android:layout_alignBottom="@+id/splitItem4"
+                            android:layout_toEndOf="@+id/splitItem4"/>
+
+                        <TextView
+                            android:id="@+id/splitItem5"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/splitItem4"
+                            android:textSize="16sp" />
+
+                        <Spinner
+                            android:id="@+id/spinnerItem5"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/splitItem4"
+                            android:layout_alignBottom="@+id/splitItem5"
+                            android:layout_toEndOf="@+id/splitItem5"/>
+
+                        <TextView
+                            android:id="@+id/splitItem6"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/splitItem5"
+                            android:textSize="16sp" />
+
+                        <Spinner
+                            android:id="@+id/spinnerItem6"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/splitItem5"
+                            android:layout_alignBottom="@+id/splitItem6"
+                            android:layout_toEndOf="@+id/splitItem6"/>
+
+                        <TextView
+                            android:id="@+id/splitItem7"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/splitItem6"
+                            android:textSize="16sp" />
+
+                        <Spinner
+                            android:id="@+id/spinnerItem7"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/splitItem6"
+                            android:layout_alignBottom="@+id/splitItem7"
+                            android:layout_toEndOf="@+id/splitItem7"/>
+
+                        <TextView
+                            android:id="@+id/splitItem8"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/splitItem7"
+                            android:textSize="16sp" />
+
+                        <Spinner
+                            android:id="@+id/spinnerItem8"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/splitItem7"
+                            android:layout_alignBottom="@+id/splitItem8"
+                            android:layout_toEndOf="@+id/splitItem8"/>
+
+                        <LinearLayout
+                            android:id="@+id/splitBtns"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/splitItem8"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@id/splitItem8">
+
+                                <Button
+                                    android:id="@+id/toTotalsBtn"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="100dp"
+                                    android:layout_marginLeft="200dp"
+                                    android:text="Continue to Totals" />
+
+                                <Button
+                                    android:id="@+id/homeBtn3"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Exit to Home" />
+
+                                <Button
+                                    android:id="@+id/splitRefreshBtn"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/homeBtn3"
+                                    android:text="Refresh Items" />
+
+                                <Button
+                                    android:id="@+id/nameRefreshBtn"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/homeBtn3"
+                                    android:layout_toRightOf="@id/splitRefreshBtn"
+                                    android:text="Refresh Names" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/totals"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/totalsText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Listed Below are the Party Totals:"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/totalEntry1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/totalEntry2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/totalEntry3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/totalEntry4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/totalEntry5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/totalEntry6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/totalEntry7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/totalEntry8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/totalEntry8">
+
+                        <Button
+                            android:id="@+id/homeBtn4"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Exit to Home" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>
