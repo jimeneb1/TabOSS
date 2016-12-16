@@ -1,6 +1,7 @@
 package com.example.android.taboss;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,9 @@ import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -22,7 +26,10 @@ import java.util.List;
 
 public class PartyActivity extends Activity {
 
+    Context context;
     private final double TAX_RATE = 1.07;
+    final String FILE_NAME = context.getFilesDir() + "/" + "MyTab_Totals.txt";
+    final int PARTY_SIZE = 8;
 
     EditText name1, name2, name3, name4, name5, name6, name7, name8;
     EditText item1, item2, item3, item4, item5, item6, item7, item8;
@@ -37,7 +44,7 @@ public class PartyActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.input_party_activity);
-
+                                                        //References to input fields
         name1 = (EditText) findViewById(R.id.inName1);
         name2 = (EditText) findViewById(R.id.inName2);
         name3 = (EditText) findViewById(R.id.inName3);
@@ -64,10 +71,10 @@ public class PartyActivity extends Activity {
         price6 = (EditText) findViewById(R.id.inPrice6);
         price7 = (EditText) findViewById(R.id.inPrice7);
         price8 = (EditText) findViewById(R.id.inPrice8);
-
+                                            //Set up Tabbed Activity
         TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
         tabHost.setup();
-
+                                            //Set up all buttons
         setupHomeButton();
         setupHomeButton2();
         setupHomeButton3();
@@ -78,7 +85,8 @@ public class PartyActivity extends Activity {
         setupSplitRefreshButton();
         setupNameRefreshButton();
         setupListView();
-
+        setupTotalToMyTabButton();
+                                            //Below will be the code to set up the Tabbed Activity UI that will display Party, Items, Split, and Totals tabs
         TabHost.TabSpec tabSpec = tabHost.newTabSpec("Party");
         tabSpec.setContent(R.id.party);
         tabSpec.setIndicator("Party");
@@ -354,6 +362,33 @@ public class PartyActivity extends Activity {
                                                         //Add new entry to Entries for Totals screen and MyTab screen
     private void makeEntry(String name, double amountOwed) {
         Entries.add(new Person(name, amountOwed));
+    }
+
+    //Final Take Home Implementation
+
+    private void setupTotalToMyTabButton() {
+        Button totalMyTabBtn = (Button) findViewById(R.id.TotalToMyTabButton);
+        totalMyTabBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    FileOutputStream fileOutputStream = openFileOutput(FILE_NAME, MODE_PRIVATE);
+                    for(int i = 0; i< PARTY_SIZE; i++) {
+                        if (Entries.get(i).getAmountOwed() != 0.00) {
+                            fileOutputStream.write(Entries.get(i).getName().getBytes());
+                            fileOutputStream.write(String.valueOf(Entries.get(i).getAmountOwed()).getBytes());
+                        }
+                    }
+                    fileOutputStream.close();
+                    Toast.makeText( getApplicationContext(), "Totals Saved to MyTab", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(PartyActivity.this, MyTabActivity.class));
+                }catch(FileNotFoundException e){
+                    e.printStackTrace();
+                }catch(IOException e){
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
 }

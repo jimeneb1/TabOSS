@@ -595,10 +595,18 @@
                         android:layout_below="@id/totalEntry8">
 
                         <Button
-                            android:id="@+id/homeBtn4"
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
-                            android:text="Exit to Home" />
+                        android:id="@+id/homeBtn4"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Exit to Home" />
+
+                        <Button
+                        android:id="@+id/TotalToMyTabButton"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="100dp"
+                        android:layout_marginLeft="200dp"
+                        android:text="Save Totals to MyTab" />
                     </RelativeLayout>
                 </LinearLayout>
             </FrameLayout>

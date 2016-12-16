@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TabHost
+        android:id="@+id/MyTabHost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/MyTab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/MyTab">
+
+                        <TextView
+                            android:id="@+id/MyTabName1"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/MyTabTotal1"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/MyTabName1"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/MyTabName2"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/MyTabName1"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/MyTabTotal2"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/MyTabName2"
+                            android:layout_below="@id/MyTabTotal1"
+                            android:textSize="16sp"  />
+
+                        <TextView
+                            android:id="@+id/MyTabName3"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/MyTabName2"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/MyTabTotal3"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/MyTabName3"
+                            android:layout_below="@id/MyTabTotal2"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/MyTabName4"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/MyTabName3"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/MyTabTotal4"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/MyTabName4"
+                            android:layout_below="@id/MyTabTotal3"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/MyTabName5"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/MyTabName4"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/MyTabTotal5"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/MyTabName5"
+                            android:layout_below="@id/MyTabTotal4"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/MyTabName6"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/MyTabName5"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/MyTabTotal6"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/MyTabName6"
+                            android:layout_below="@id/MyTabTotal5"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/MyTabName7"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/MyTabName6"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/MyTabTotal7"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/MyTabName7"
+                            android:layout_below="@id/MyTabTotal6"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/MyTabName8"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/MyTabName7"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/MyTabTotal8"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/MyTabName8"
+                            android:layout_below="@id/MyTabTotal7"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/editMyTabBtn"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/MyTabName8"
+                            android:text="Edit Entries" />
+
+                        <Button
+                            android:id="@+id/MyTabHomeBtn"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/MyTabName8"
+                            android:layout_toEndOf="@+id/editMyTabBtn"
+                            android:text="Return To Home" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>
